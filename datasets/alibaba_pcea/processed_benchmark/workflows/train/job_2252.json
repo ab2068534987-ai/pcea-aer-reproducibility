@@ -1,0 +1,165 @@
+{
+  "workflow_id": "job_2252",
+  "submit_time": 9354.0,
+  "tasks": [
+    {
+      "id": 0,
+      "cpu": 16,
+      "gpu": 4,
+      "mem": 256,
+      "base_duration": 120.5,
+      "gpu_intensity": 0.9,
+      "data_size": 8192.0,
+      "output_mb": 8192.0,
+      "profile_name": "gpu_train",
+      "profile_id": 1,
+      "preferred_type": "REAL_4090_2GPU",
+      "affinity_bonus": 0.18,
+      "parallelism": 306,
+      "deadline": 449.25,
+      "raw_node_id": "n12899",
+      "raw_task_name": "12899",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.01600704061294748
+    },
+    {
+      "id": 1,
+      "cpu": 16,
+      "gpu": 4,
+      "mem": 256,
+      "base_duration": 64.0,
+      "gpu_intensity": 0.9,
+      "data_size": 5527.0,
+      "output_mb": 5527.0,
+      "profile_name": "gpu_train",
+      "profile_id": 1,
+      "preferred_type": "REAL_4090_2GPU",
+      "affinity_bonus": 0.18,
+      "parallelism": 301,
+      "deadline": 449.25,
+      "raw_node_id": "n12902",
+      "raw_task_name": "12902",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.013356456915072607
+    },
+    {
+      "id": 2,
+      "cpu": 16,
+      "gpu": 4,
+      "mem": 256,
+      "base_duration": 63.0,
+      "gpu_intensity": 0.9,
+      "data_size": 5468.0,
+      "output_mb": 5468.0,
+      "profile_name": "gpu_train",
+      "profile_id": 1,
+      "preferred_type": "REAL_4090_2GPU",
+      "affinity_bonus": 0.18,
+      "parallelism": 285,
+      "deadline": 449.25,
+      "raw_node_id": "n12900",
+      "raw_task_name": "12900",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.013356456915072607
+    },
+    {
+      "id": 3,
+      "cpu": 16,
+      "gpu": 2,
+      "mem": 256,
+      "base_duration": 44.0,
+      "gpu_intensity": 0.9,
+      "data_size": 6890.0,
+      "output_mb": 6890.0,
+      "profile_name": "gpu_train",
+      "profile_id": 1,
+      "preferred_type": "REAL_4090_2GPU",
+      "affinity_bonus": 0.18,
+      "parallelism": 301,
+      "deadline": 449.25,
+      "raw_node_id": "n12901",
+      "raw_task_name": "12901",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.010307250278259518
+    },
+    {
+      "id": 4,
+      "cpu": 16,
+      "gpu": 4,
+      "mem": 256,
+      "base_duration": 71.0,
+      "gpu_intensity": 0.9,
+      "data_size": 5810.0,
+      "output_mb": 5810.0,
+      "profile_name": "gpu_train",
+      "profile_id": 1,
+      "preferred_type": "REAL_4090_2GPU",
+      "affinity_bonus": 0.18,
+      "parallelism": 403,
+      "deadline": 449.25,
+      "raw_node_id": "n12898",
+      "raw_task_name": "12898",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.008655812388372635
+    }
+  ],
+  "edges": [
+    {
+      "src": 0,
+      "dst": 2,
+      "data_mb": 8192.0
+    },
+    {
+      "src": 0,
+      "dst": 1,
+      "data_mb": 8192.0
+    },
+    {
+      "src": 2,
+      "dst": 3,
+      "data_mb": 5468.0
+    },
+    {
+      "src": 3,
+      "dst": 4,
+      "data_mb": 6890.0
+    },
+    {
+      "src": 1,
+      "dst": 3,
+      "data_mb": 5527.0
+    }
+  ],
+  "makespan_target": 449.25,
+  "metadata": {
+    "source": "AlibabaClusterTrace2018",
+    "dataset_version": "alibaba_pcea_v2_balanced_profiles",
+    "dag_mode": "time_inferred",
+    "num_nodes": 5,
+    "num_edges": 5,
+    "augmentation": {
+      "version": "alibaba_pcea_v2_balanced_profiles",
+      "seed": 42,
+      "profile_policy": "balanced_gpu",
+      "cpu_only_target_share": 0.25,
+      "gpu_rule": "duration_mem_degree_profile_with_cpu_only_cap",
+      "cpu_mem_rule": "plan_cpu_plan_mem_quantile_bucket",
+      "output_mb_rule": "profile_duration_scaled_randomized",
+      "cpu_only_gpu_intensity": 0.0,
+      "cpu_only_preferred_types": [
+        "SYN_T4_2GPU",
+        "REAL_T4_4GPU",
+        "SYN_T4_8GPU"
+      ],
+      "data_size_unit": "MB"
+    },
+    "critical_path_estimate": 299.5,
+    "total_work_estimate": 362.5,
+    "makespan_target": 449.25,
+    "depth": 4,
+    "width_estimate": 2,
+    "edge_density": 0.25,
+    "submit_time": 9354.0,
+    "job_name": "2252"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "workflow_id": "job_804",
+  "submit_time": 3354.0,
+  "tasks": [
+    {
+      "id": 0,
+      "cpu": 4,
+      "gpu": 1,
+      "mem": 64,
+      "base_duration": 4.0,
+      "gpu_intensity": 0.7,
+      "data_size": 348.0,
+      "output_mb": 348.0,
+      "profile_name": "gpu_infer",
+      "profile_id": 2,
+      "preferred_type": "REAL_T4_4GPU",
+      "affinity_bonus": 0.08,
+      "parallelism": 33,
+      "deadline": 26.0,
+      "raw_node_id": "n4058",
+      "raw_task_name": "4058",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.013356456915072607
+    },
+    {
+      "id": 1,
+      "cpu": 8,
+      "gpu": 2,
+      "mem": 128,
+      "base_duration": 8.0,
+      "gpu_intensity": 0.55,
+      "data_size": 1637.0,
+      "output_mb": 1637.0,
+      "profile_name": "hybrid_analytics",
+      "profile_id": 3,
+      "preferred_type": "REAL_4090_2GPU",
+      "affinity_bonus": 0.12,
+      "parallelism": 33,
+      "deadline": 26.0,
+      "raw_node_id": "n4059",
+      "raw_task_name": "4059",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.010705873217197733
+    },
+    {
+      "id": 2,
+      "cpu": 4,
+      "gpu": 1,
+      "mem": 64,
+      "base_duration": 7.0,
+      "gpu_intensity": 0.7,
+      "data_size": 775.0,
+      "output_mb": 775.0,
+      "profile_name": "gpu_infer",
+      "profile_id": 2,
+      "preferred_type": "REAL_T4_4GPU",
+      "affinity_bonus": 0.08,
+      "parallelism": 3,
+      "deadline": 26.0,
+      "raw_node_id": "n4061",
+      "raw_task_name": "4061",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.007868920353066031
+    },
+    {
+      "id": 3,
+      "cpu": 4,
+      "gpu": 0,
+      "mem": 32,
+      "base_duration": 1.5,
+      "gpu_intensity": 0.0,
+      "data_size": 67.0,
+      "output_mb": 67.0,
+      "profile_name": "cpu_preproc",
+      "profile_id": 0,
+      "preferred_type": "SYN_T4_2GPU",
+      "affinity_bonus": 0.0,
+      "parallelism": 13,
+      "deadline": 26.0,
+      "raw_node_id": "n4060",
+      "raw_task_name": "4060",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.007853389589211297
+    },
+    {
+      "id": 4,
+      "cpu": 4,
+      "gpu": 0,
+      "mem": 8,
+      "base_duration": 1.0,
+      "gpu_intensity": 0.0,
+      "data_size": 64.0,
+      "output_mb": 64.0,
+      "profile_name": "cpu_preproc",
+      "profile_id": 0,
+      "preferred_type": "SYN_T4_2GPU",
+      "affinity_bonus": 0.0,
+      "parallelism": 1,
+      "deadline": 26.0,
+      "raw_node_id": "n4057",
+      "raw_task_name": "4057",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.004115652421504931
+    }
+  ],
+  "edges": [
+    {
+      "src": 0,
+      "dst": 3,
+      "data_mb": 348.0
+    },
+    {
+      "src": 0,
+      "dst": 2,
+      "data_mb": 348.0
+    },
+    {
+      "src": 1,
+      "dst": 3,
+      "data_mb": 1637.0
+    },
+    {
+      "src": 1,
+      "dst": 2,
+      "data_mb": 1637.0
+    },
+    {
+      "src": 3,
+      "dst": 4,
+      "data_mb": 67.0
+    },
+    {
+      "src": 2,
+      "dst": 4,
+      "data_mb": 775.0
+    }
+  ],
+  "makespan_target": 26.0,
+  "metadata": {
+    "source": "AlibabaClusterTrace2018",
+    "dataset_version": "alibaba_pcea_v2_balanced_profiles",
+    "dag_mode": "time_inferred",
+    "num_nodes": 5,
+    "num_edges": 6,
+    "augmentation": {
+      "version": "alibaba_pcea_v2_balanced_profiles",
+      "seed": 42,
+      "profile_policy": "balanced_gpu",
+      "cpu_only_target_share": 0.25,
+      "gpu_rule": "duration_mem_degree_profile_with_cpu_only_cap",
+      "cpu_mem_rule": "plan_cpu_plan_mem_quantile_bucket",
+      "output_mb_rule": "profile_duration_scaled_randomized",
+      "cpu_only_gpu_intensity": 0.0,
+      "cpu_only_preferred_types": [
+        "SYN_T4_2GPU",
+        "REAL_T4_4GPU",
+        "SYN_T4_8GPU"
+      ],
+      "data_size_unit": "MB"
+    },
+    "critical_path_estimate": 16.0,
+    "total_work_estimate": 21.5,
+    "makespan_target": 26.0,
+    "depth": 3,
+    "width_estimate": 2,
+    "edge_density": 0.3,
+    "submit_time": 3354.0,
+    "job_name": "804"
+  }
+}

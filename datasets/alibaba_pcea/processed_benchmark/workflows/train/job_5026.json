@@ -1,0 +1,160 @@
+{
+  "workflow_id": "job_5026",
+  "submit_time": 2756.0,
+  "tasks": [
+    {
+      "id": 0,
+      "cpu": 4,
+      "gpu": 1,
+      "mem": 64,
+      "base_duration": 11.0,
+      "gpu_intensity": 0.7,
+      "data_size": 709.0,
+      "output_mb": 709.0,
+      "profile_name": "gpu_infer",
+      "profile_id": 2,
+      "preferred_type": "REAL_T4_4GPU",
+      "affinity_bonus": 0.08,
+      "parallelism": 2,
+      "deadline": 63.0,
+      "raw_node_id": "n31437",
+      "raw_task_name": "31437",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.00805528951932286
+    },
+    {
+      "id": 1,
+      "cpu": 8,
+      "gpu": 2,
+      "mem": 128,
+      "base_duration": 31.0,
+      "gpu_intensity": 0.55,
+      "data_size": 2278.0,
+      "output_mb": 2278.0,
+      "profile_name": "hybrid_analytics",
+      "profile_id": 3,
+      "preferred_type": "REAL_4090_2GPU",
+      "affinity_bonus": 0.12,
+      "parallelism": 57,
+      "deadline": 63.0,
+      "raw_node_id": "n31438",
+      "raw_task_name": "31438",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.01600704061294748
+    },
+    {
+      "id": 2,
+      "cpu": 4,
+      "gpu": 1,
+      "mem": 64,
+      "base_duration": 24.5,
+      "gpu_intensity": 0.7,
+      "data_size": 1168.0,
+      "output_mb": 1168.0,
+      "profile_name": "gpu_infer",
+      "profile_id": 2,
+      "preferred_type": "REAL_T4_4GPU",
+      "affinity_bonus": 0.08,
+      "parallelism": 127,
+      "deadline": 63.0,
+      "raw_node_id": "n31439",
+      "raw_task_name": "31439",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.007848212667926385
+    },
+    {
+      "id": 3,
+      "cpu": 4,
+      "gpu": 1,
+      "mem": 64,
+      "base_duration": 5.0,
+      "gpu_intensity": 0.7,
+      "data_size": 607.0,
+      "output_mb": 607.0,
+      "profile_name": "gpu_infer",
+      "profile_id": 2,
+      "preferred_type": "REAL_T4_4GPU",
+      "affinity_bonus": 0.08,
+      "parallelism": 227,
+      "deadline": 63.0,
+      "raw_node_id": "n31435",
+      "raw_task_name": "31435",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.00805528951932286
+    },
+    {
+      "id": 4,
+      "cpu": 4,
+      "gpu": 1,
+      "mem": 32,
+      "base_duration": 6.0,
+      "gpu_intensity": 0.7,
+      "data_size": 681.0,
+      "output_mb": 681.0,
+      "profile_name": "gpu_infer",
+      "profile_id": 2,
+      "preferred_type": "REAL_T4_4GPU",
+      "affinity_bonus": 0.08,
+      "parallelism": 7,
+      "deadline": 63.0,
+      "raw_node_id": "n31436",
+      "raw_task_name": "31436",
+      "plan_cpu": 50.0,
+      "plan_mem": 0.004219190847203168
+    }
+  ],
+  "edges": [
+    {
+      "src": 3,
+      "dst": 4,
+      "data_mb": 607.0
+    },
+    {
+      "src": 0,
+      "dst": 3,
+      "data_mb": 709.0
+    },
+    {
+      "src": 1,
+      "dst": 3,
+      "data_mb": 2278.0
+    },
+    {
+      "src": 2,
+      "dst": 3,
+      "data_mb": 1168.0
+    }
+  ],
+  "makespan_target": 63.0,
+  "metadata": {
+    "source": "AlibabaClusterTrace2018",
+    "dataset_version": "alibaba_pcea_v2_balanced_profiles",
+    "dag_mode": "time_inferred",
+    "num_nodes": 5,
+    "num_edges": 4,
+    "augmentation": {
+      "version": "alibaba_pcea_v2_balanced_profiles",
+      "seed": 42,
+      "profile_policy": "balanced_gpu",
+      "cpu_only_target_share": 0.25,
+      "gpu_rule": "duration_mem_degree_profile_with_cpu_only_cap",
+      "cpu_mem_rule": "plan_cpu_plan_mem_quantile_bucket",
+      "output_mb_rule": "profile_duration_scaled_randomized",
+      "cpu_only_gpu_intensity": 0.0,
+      "cpu_only_preferred_types": [
+        "SYN_T4_2GPU",
+        "REAL_T4_4GPU",
+        "SYN_T4_8GPU"
+      ],
+      "data_size_unit": "MB"
+    },
+    "critical_path_estimate": 42.0,
+    "total_work_estimate": 77.5,
+    "makespan_target": 63.0,
+    "depth": 3,
+    "width_estimate": 3,
+    "edge_density": 0.2,
+    "submit_time": 2756.0,
+    "job_name": "5026"
+  }
+}

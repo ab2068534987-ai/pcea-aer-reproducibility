@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "power-compute-scheduler"
+version = "0.1.0"
+description = "PCEA-PPO for power-compute co-scheduling of heterogeneous CPU-GPU DAG workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Power-Compute Scheduling Project"}]
+dependencies = [
+  "numpy>=1.22",
+  "pandas>=1.5",
+  "torch>=2.0",
+]
+
+[project.scripts]
+pcos = "pcos.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+  ".git",
+  ".pytest_cache",
+  "__pycache__",
+  "outputs",
+  "archives",
+  "datasets",
+  "models",
+  "results",
+  "pip-build-tracker-*",
+  "pip-ephem-wheel-cache-*",
+  "pip-install-*",
+  ".tmp_conda",
+]

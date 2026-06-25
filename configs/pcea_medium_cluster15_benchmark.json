@@ -1,0 +1,70 @@
+{
+  "cluster": {
+    "preset": "cluster_15_realistic"
+  },
+  "data": {
+    "root": "datasets/alibaba_pcea/processed_benchmark",
+    "train_limit": null,
+    "benchmark_limit": null
+  },
+  "output_dir": "outputs/pcea_medium_cluster15_benchmark",
+  "env": {
+    "idle_timeout_s": 300.0,
+    "bandwidth_MBps": 250.0,
+    "latency_s": 0.01,
+    "energy_per_MB": 0.02,
+    "energy_norm": 10000.0
+  },
+  "power_envelope": {
+    "scenario": "peak_valley",
+    "slot_s": 300.0,
+    "phase_mode": "random",
+    "b_min_ratio": 0.45,
+    "b_max_ratio": 0.8
+  },
+  "defer": {
+    "enabled": true,
+    "max_defer_s": 300.0,
+    "safe_slack_margin_s": 30.0,
+    "headroom_margin_ratio": 0.05,
+    "require_power_pressure": true
+  },
+  "pcea": {
+    "lambda_power_init": 0.1,
+    "lambda_deadline_init": 1.0,
+    "dual_lr_power": 0.02,
+    "dual_lr_deadline": 0.05,
+    "epsilon_power_violation": 0.02,
+    "epsilon_deadline_miss": 0.01,
+    "lambda_max": 10.0,
+    "scalar_gae": false,
+    "fixed_dual": false
+  },
+  "ppo": {
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "lr": 0.0003,
+    "ppo_clip": 0.2,
+    "entropy_coef": 0.01,
+    "value_coef": 0.5,
+    "ppo_epochs": 4,
+    "minibatch_size": 32,
+    "hidden": 128
+  },
+  "train": {
+    "iterations": 20,
+    "episodes_per_iter": 4,
+    "max_steps": 2000,
+    "total_episodes": 2000,
+    "eval_interval": 50,
+    "val_limit": 100,
+    "eval_limit": 100
+  },
+  "benchmark": {
+    "methods": [
+      "fcfs",
+      "heft",
+      "min_energy"
+    ]
+  }
+}

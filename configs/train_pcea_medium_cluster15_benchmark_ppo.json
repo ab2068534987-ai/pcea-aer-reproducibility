@@ -1,0 +1,92 @@
+{
+    "cluster":  {
+                    "preset":  "cluster_15_realistic"
+                },
+    "data":  {
+                 "root":  "datasets/alibaba_pcea/processed_benchmark",
+                 "train_limit":  null,
+                 "benchmark_limit":  50,
+                 "val_limit":  100,
+                 "eval_limit":  100
+             },
+    "output_dir":  "outputs/train_pcea_medium_cluster15_benchmark_ppo",
+    "env":  {
+                "idle_timeout_s":  300.0,
+                "bandwidth_MBps":  250.0,
+                "latency_s":  0.01,
+                "energy_per_MB":  0.02,
+                "energy_norm":  10000.0
+            },
+    "power_envelope":  {
+                           "scenario":  "peak_valley",
+                           "slot_s":  300.0,
+                           "phase_mode":  "random",
+                           "b_min_ratio":  0.45,
+                           "b_max_ratio":  0.8
+                       },
+    "defer":  {
+                  "enabled":  true,
+                  "max_defer_s":  30.0,
+                  "safe_slack_margin_s":  90.0,
+                  "headroom_margin_ratio":  0.05,
+                  "require_power_pressure":  true,
+                  "urgent_slack_ratio":  0.15,
+                  "min_defer_power_pressure_ratio":  1E-06
+              },
+    "pcea":  {
+                 "lambda_power_init":  0.0,
+                 "lambda_deadline_init":  1.0,
+                 "dual_lr_power":  0.001,
+                 "dual_lr_deadline":  0.05,
+                 "max_power_violation_soft":  0.00025,
+                 "max_deadline_miss":  0.01,
+                 "epsilon_power_violation":  0.00025,
+                 "epsilon_deadline_miss":  0.01,
+                 "lambda_max":  10.0,
+                 "lambda_power_max":  0.5,
+                 "lambda_deadline_max":  10.0,
+                 "performance_cost_coef":  0.9,
+                 "cpeg_enabled":  false,
+                 "cpeg_criticality_threshold":  0.6,
+                 "cpeg_eft_regret_ratio":  0.1,
+                 "cpeg_power_pressure_margin":  0.02,
+                 "cpeg_logit_penalty":  8.0,
+                 "cpeg_cost_coef":  0.5,
+                 "scalar_gae":  false,
+                 "fixed_dual":  false,
+                 "penalty_deadline":  1000000.0,
+                 "anti_idle_enabled":  false,
+                 "anti_idle_eft_regret_ratio":  0.02,
+                 "anti_idle_power_pressure_margin":  0.01,
+                 "anti_idle_cost_coef":  0.6,
+                 "anti_idle_idle_cost_coef":  0.5,
+                 "anti_idle_logit_penalty":  4.0
+             },
+    "ppo":  {
+                "gamma":  0.99,
+                "gae_lambda":  0.95,
+                "lr":  0.0003,
+                "ppo_clip":  0.2,
+                "entropy_coef":  0.01,
+                "value_coef":  0.5,
+                "ppo_epochs":  4,
+                "minibatch_size":  32,
+                "hidden":  128
+            },
+    "train":  {
+                  "total_episodes":  1000,
+                  "episodes_per_iter":  4,
+                  "eval_interval":  50,
+                  "eval_split":  "val",
+                  "val_limit":  100,
+                  "eval_limit":  100,
+                  "max_steps":  2000
+              },
+    "benchmark":  {
+                      "methods":  [
+                                      "fcfs",
+                                      "heft",
+                                      "min_energy"
+                                  ]
+                  }
+}
