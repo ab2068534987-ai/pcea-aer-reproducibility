@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "PCEA-AER: Power-Compute Envelope Advantage PPO with Active-Window Energy Reallocation"
+message: "If you use this software, please cite it as below."
+type: software
+version: "1.0.0"
+license: "MIT"
+authors:
+  - family-names: Li
+    given-names: Yang
+    affiliation: "University of Electronic Science and Technology of China"
+  - family-names: Hou
+    given-names: Wenjin
+    affiliation: "University of Electronic Science and Technology of China"
+  - family-names: Ding
+    given-names: Ziyue
+    affiliation: "University of Electronic Science and Technology of China"
+  - family-names: Long
+    given-names: Yanyu
+    affiliation: "University of Electronic Science and Technology of China"
+  - family-names: Li
+    given-names: Gang
+    affiliation: "University of Electronic Science and Technology of China"
+  - family-names: Wen
+    given-names: Guangjun
+    affiliation: "University of Electronic Science and Technology of China"
+keywords:
+  - CPU-GPU heterogeneous computing
+  - DAG workflow scheduling
+  - power-compute co-scheduling
+  - power-envelope constraint
+  - active-window energy reallocation
+  - proximal policy optimization
+  - energy-efficient scheduling
+repository-code: "https://github.com/ab2068534987-ai/pcea-aer-reproducibility"
+abstract: "This repository provides the reproducibility package for PCEA-AER, including source code, experiment configurations, processed benchmark data, a trained checkpoint, evaluation scripts, result tables, and documentation."

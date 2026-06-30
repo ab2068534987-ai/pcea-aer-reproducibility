@@ -66,3 +66,17 @@ PCEA-AER keeps `deadline_miss_rate = 0` in the reported evaluation. In the group
 - Evaluation checkpoint: `models/pcea_aer/best_energy_pcea_ppo.pt`
 
 See `docs/` for additional method, dataset, and experiment notes.
+
+## Citation
+
+This repository is prepared for archival on Zenodo. After publishing the `v1.0.0` GitHub release and Zenodo has generated the DOI, replace `10.5281/zenodo.xxxxxxx` with the Version DOI.
+
+```text
+Li Y, Hou W, Ding Z, Long Y, Li G, Wen G. 2026. PCEA-AER: Power-Compute Envelope Advantage PPO with Active-Window Energy Reallocation. Zenodo. https://doi.org/10.5281/zenodo.xxxxxxx
+```
+
+The citation metadata is available in `CITATION.cff` and `.zenodo.json`.
+
+## Data and Code Availability
+
+The source code, experimental configurations, processed benchmark descriptions, trained checkpoint, evaluation scripts, and result tables supporting this study are available at GitHub: https://github.com/ab2068534987-ai/pcea-aer-reproducibility. The archived version will be available at Zenodo after the GitHub release DOI is generated.

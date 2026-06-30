@@ -1,0 +1,44 @@
+{
+  "title": "PCEA-AER: Power-Compute Envelope Advantage PPO with Active-Window Energy Reallocation",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "description": "This repository provides the reproducibility package for PCEA-AER, including source code, experiment configurations, processed benchmark data, a trained checkpoint, evaluation scripts, result tables, and documentation for heterogeneous CPU-GPU DAG workflow scheduling under time-varying power-envelope constraints.",
+  "creators": [
+    {
+      "name": "Li, Yang",
+      "affiliation": "University of Electronic Science and Technology of China"
+    },
+    {
+      "name": "Hou, Wenjin",
+      "affiliation": "University of Electronic Science and Technology of China"
+    },
+    {
+      "name": "Ding, Ziyue",
+      "affiliation": "University of Electronic Science and Technology of China"
+    },
+    {
+      "name": "Long, Yanyu",
+      "affiliation": "University of Electronic Science and Technology of China"
+    },
+    {
+      "name": "Li, Gang",
+      "affiliation": "University of Electronic Science and Technology of China"
+    },
+    {
+      "name": "Wen, Guangjun",
+      "affiliation": "University of Electronic Science and Technology of China"
+    }
+  ],
+  "keywords": [
+    "CPU-GPU heterogeneous computing",
+    "DAG workflow scheduling",
+    "power-compute co-scheduling",
+    "power-envelope constraint",
+    "active-window energy reallocation",
+    "proximal policy optimization",
+    "energy-efficient scheduling"
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng"
+}
