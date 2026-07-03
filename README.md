@@ -212,18 +212,6 @@ reallocation is accepted only when the replayed schedule preserves the
 feasibility checks used by the scheduler, including DAG precedence, resource
 capacity, deadline behavior, and makespan behavior.
 
-## Citation
-
-If you use this artifact, cite the archived reproducibility package:
-
-```text
-Li Y, Hou W, Ding Z, Long Y, Li G, Wen G. 2026.
-PCEA-AER: Power-Compute Envelope Advantage PPO with Active-Window Energy Reallocation.
-Zenodo. https://doi.org/10.5281/zenodo.21071243
-```
-
-Citation metadata are also provided in `CITATION.cff` and `.zenodo.json`.
-
 ## License and Data Terms
 
 The source code in this repository is released under the MIT License; see
