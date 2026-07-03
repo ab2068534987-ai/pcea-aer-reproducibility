@@ -229,19 +229,3 @@ Citation metadata are also provided in `CITATION.cff` and `.zenodo.json`.
 The source code in this repository is released under the MIT License; see
 `LICENSE`. The original Alibaba Cluster Trace 2018 data are provided by the
 Alibaba Cluster Trace Program and remain subject to the original data terms.
-
-## Data and Code Availability
-
-The source code, experimental configurations, processed benchmark files,
-training and evaluation scripts, checkpoint, and result tables supporting this
-artifact are available at GitHub:
-
-```text
-https://github.com/ab2068534987-ai/pcea-aer-reproducibility
-```
-
-The archived version corresponding to this manuscript is available at Zenodo:
-
-```text
-https://doi.org/10.5281/zenodo.21071243
-```
