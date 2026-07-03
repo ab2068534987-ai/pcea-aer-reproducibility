@@ -7,9 +7,6 @@ time-varying power-envelope constraint. A trained PCEA-PPO policy first
 generates a feasible schedule, and an inference-time AER step then attempts
 local task reallocations to reduce active-server energy.
 
-This repository is not a full development workspace. It keeps the files needed
-to inspect the implementation and rerun the reported evaluation, while omitting
-raw trace files and intermediate exploratory materials.
 
 ## Repository Contents
 
